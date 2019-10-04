@@ -80,3 +80,12 @@ body {
     top: -7px;
     right: 10px;
 }
+
+.player-current-box {
+    background-color: #EB4D4D;
+    color: #fff;
+    width: 40%;
+    margin: 0 auto;
+    padding: 12px;
+    text-align: center;
+}
