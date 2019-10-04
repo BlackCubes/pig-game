@@ -60,3 +60,11 @@ body {
     margin-bottom: 10px;
     position: relative;
 }
+
+.player-score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+}
