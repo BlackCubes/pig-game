@@ -2,6 +2,10 @@ var scores, roundScore, activePlayer, gamePlaying, winningScore;
 
 init();
 
+document.querySelector('.btn-roll').addEventListener('click', function() {
+
+});
+
 function init() {
 
     scores = [0, 0];
