@@ -3,7 +3,9 @@ var scores, roundScore, activePlayer, gamePlaying, winningScore;
 init();
 
 document.querySelector('.btn-roll').addEventListener('click', function() {
-
+    if (gamePlaying) {
+        
+    }
 });
 
 function init() {
