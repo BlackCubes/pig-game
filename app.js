@@ -54,6 +54,8 @@ function nextPlayer() {
 
 }
 
+document.querySelector('.btn-new').addEventListener('click', init);
+
 function init() {
 
     scores = [0, 0];
