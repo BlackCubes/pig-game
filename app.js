@@ -1,5 +1,7 @@
 var scores, roundScore, activePlayer, gamePlaying, winningScore;
 
+init();
+
 function init() {
 
     scores = [0, 0];
@@ -22,4 +24,5 @@ function init() {
     document.querySelector('.player-0-panel').classList.remove('active');
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
+
 }
