@@ -105,6 +105,29 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
 });
 ```
 
+The last event listener is when the user clicks on `btn-hold` (button hold) which is where the user wants to hold onto whatever value the randomize dice number is. As usual, the `if-conditional` checks if `gamePlaying` is `true`. Then, the global variable `roundScore` stores to the array of `scores` based on the current active player playing. This is done by using the global variable `activePlayer` based on the function `nextPlayer()`. `scores[activePlayer]` will keep adding the `roundScore` whenever the user keeps clicking button hold, and whenever the current active player has not hit a numeric value of `1`. This active player score would dynimcally interact with the browser by displaying it. Lastly, an `if-conditional` checks if the current active player has reached the winning score value, or exceeds it. If it does pass the conditional, then it dynmically displays the winning player. If it does not pass the conditional, then it goes to the next player by using the function `nextPlayer()`:
+
+```sh
+document.querySelector('.btn-hold').addEventListener('click', function() {
+    if (gamePlaying) {
+
+        scores[activePlayer] += roundScore;
+
+        document.querySelector('#score-' + activePlayer).textContent = scores[activePlayer];
+
+        if (scores[activePlayer] >= winningScore) {
+            document.querySelector('#name-' + activePlayer).textContent = 'Winner!';
+            document.querySelector('.dice').style.display = 'none';
+            document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
+            document.querySelector('.player-' + activePlayer + '-panel').classList.remove('active');
+            gamePlaying = false;
+        } else {
+            nextPlayer();
+        }
+    }
+});
+```
+
 The game implements JavaScript to make it work while also using the basics of HTML and CSS. No plug-ins for JS (JavaScript), but it does use the Google API Font for Lato and it uses the icons from Ionic Framework website.
 
 This JavaScript game was inspired when I was learning on JavaScript from a Udemy course "The Complete JavaScript Course 2019: Build Real Projects!" by (name). All of my thanks and the code belongs to him.
