@@ -71,6 +71,8 @@ function init() {
         winningScore = 30;
     }
 
+    document.querySelector('.winning-score-panel').textContent = winningScore;
+
     document.querySelector('.dice').style.display = 'none';
 
     document.getElementById('score-0').textContent = '0';
