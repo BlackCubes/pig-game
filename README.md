@@ -83,6 +83,28 @@ function nextPlayer() {
 }
 ```
 
+Two anonymous functions are created for event listeners. One is used when the user clicks on `btn-roll` (button roll) which is used to keep rolling the dice. It checks if the global variable `gamePlaying` is true. Inside the `if-statement`, variable `dice` is used to create a randomized numbers between `1` and `6`. This `dice` interacts with the DOM (Document Object Module) to dynamically change the images of the dice in the browser. Lastly, it checks if `dice` does not equal to `1` which stores randomize value into the global variable `roundScore` and updates the browser. If `dice` does equal to `1`, then it goes to the next player by using the function of `nextPlayer()`:
+
+```sh
+document.querySelector('.btn-roll').addEventListener('click', function() {
+    if (gamePlaying) {
+
+        var dice = Math.floor(Math.random() * 6) + 1;
+
+        var diceDOM = document.querySelector('.dice');
+        diceDOM.style.display = 'block';
+        diceDOM.src = 'dice-' + dice + '.png';
+
+        if (dice !== 1) {
+            roundScore += dice;
+            document.querySelector('#current-' + activePlayer).textContent = roundScore;
+        } else {
+            nextPlayer();
+        }
+    }
+});
+```
+
 The game implements JavaScript to make it work while also using the basics of HTML and CSS. No plug-ins for JS (JavaScript), but it does use the Google API Font for Lato and it uses the icons from Ionic Framework website.
 
 This JavaScript game was inspired when I was learning on JavaScript from a Udemy course "The Complete JavaScript Course 2019: Build Real Projects!" by (name). All of my thanks and the code belongs to him.
