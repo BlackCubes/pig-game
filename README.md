@@ -27,6 +27,43 @@ document.querySelector('.winning-score-panel').textContent = winningScore;
 
 It then displays whatever the variable `winningScore` is to the browser. The object `parseInt()` is used to convert the string into numeric value from the prompt. The object `Number.isInteger()` checks if the value if numeric. If not, then it returns `false`.
 
+The function `init()` initializes the code when the page is first started, or when the user clicks on `NEW GAME`, and this is done by setting `scores`, `activePlayer`, and `roundScore` to `0`. Last but not least it sets `gamePlaying` to `true`:
+
+```sh
+function init() {
+
+    scores = [0, 0];
+    activePlayer = 0;
+    roundScore = 0;
+    gamePlaying = true;
+
+    winningScore = prompt('What should the winning score be?');
+
+    if (Number.isInteger(parseInt(winningScore))) {
+        winningScore = parseInt(winningScore);
+    } else {
+        winningScore = 30;
+    }
+
+    document.querySelector('.winning-score-panel').textContent = winningScore;
+
+    document.querySelector('.dice').style.display = 'none';
+
+    document.getElementById('score-0').textContent = '0';
+    document.getElementById('score-1').textContent = '0';
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+    document.getElementById('name-0').textContent = 'Player 1';
+    document.getElementById('name-1').textContent = 'Player 2';
+    document.querySelector('.player-0-panel').classList.remove('winner');
+    document.querySelector('.player-1-panel').classList.remove('winner');
+    document.querySelector('.player-0-panel').classList.remove('active');
+    document.querySelector('.player-1-panel').classList.remove('active');
+    document.querySelector('.player-0-panel').classList.add('active');
+
+}
+```
+
 The game implements JavaScript to make it work while also using the basics of HTML and CSS. No plug-ins for JS (JavaScript), but it does use the Google API Font for Lato and it uses the icons from Ionic Framework website.
 
 This JavaScript game was inspired when I was learning on JavaScript from a Udemy course "The Complete JavaScript Course 2019: Build Real Projects!" by (name). All of my thanks and the code belongs to him.
