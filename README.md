@@ -1,11 +1,13 @@
 # Pig Game (A JavaScript Game)
 
-Pig Game (or Pig) was first created by John Scarne in 1945 which is basically a simple dice game. The rules of the game is that the players keep rolling a dice until a hit a 1 which is then the next player's turn. Yet, if the player has not hit a 1 then that player could 'hold' onto those values to add into their original value. The exact technicality of the game (according to Wikipedia) is:
+Pig Game (or Pig) was first created by John Scarne in 1945 which is basically a simple dice game. The rules of the game is that the players keep rolling a dice until they hit a 1 which is then the next player's turn. Yet, if the player has not hit a 1 then that player could 'hold' onto those values to add into their original value. The exact technicality of the game (according to Wikipedia) is:
 
 - If the player rolls a 1, they score nothing and it becomes the next player's turn.
 - If the player rolls any other number, it is added to their turn total and the player's turn continues.
 - If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
 - The first player to score the winning score or more wins the game.
+
+To actually play the game, click on the link (LINK!).
 
 The player could hit `ROLL DICE` to continue to roll (show picture), `HOLD` to keep the score (show picture), or click `NEW GAME` to start a brand new game (show picture).
 
@@ -25,7 +27,7 @@ if (Number.isInteger(parseInt(winningScore))) {
 document.querySelector('.winning-score-panel').textContent = winningScore;
 ```
 
-It then displays whatever the variable `winningScore` is to the browser. The object `parseInt()` is used to convert the string into numeric value from the prompt. The object `Number.isInteger()` checks if the value if numeric. If not, then it returns `false`.
+It then displays whatever the variable `winningScore` is to the browser. The object `parseInt()` is used to convert the string into numeric value from the prompt. The object `Number.isInteger()` checks if the value is numeric. If not, then it returns `false`.
 
 The function `init()` initializes the code when the page is first started, or when the user clicks on `NEW GAME`, and this is done by setting `scores`, `activePlayer`, and `roundScore` to `0`. Last but not least is setting `gamePlaying` to `true`:
 
@@ -83,7 +85,7 @@ function nextPlayer() {
 }
 ```
 
-Two anonymous functions are created for event listeners. One is used when the user clicks on `btn-roll` (button roll) which is used to keep rolling the dice. It checks if the global variable `gamePlaying` is true. Inside the `if-statement`, variable `dice` is used to create a randomized numbers between `1` and `6`. This `dice` interacts with the DOM (Document Object Module) to dynamically change the images of the dice in the browser. Lastly, it checks if `dice` does not equal to `1` which stores randomize value into the global variable `roundScore` and updates the browser. If `dice` does equal to `1`, then it goes to the next player by using the function of `nextPlayer()`:
+Two anonymous functions are created for event listeners. One is used when the user clicks on `btn-roll` (button roll) which is used to keep rolling the dice. It checks if the global variable `gamePlaying` is true. Inside the `if-statement`, variable `dice` is used to create randomized numbers between `1` and `6`. This `dice` interacts with the DOM (Document Object Module) to dynamically change the images of the dice in the browser. Lastly, it checks if `dice` does not equal to `1` which stores randomize value into the global variable `roundScore` and updates the browser. If `dice` does equal to `1`, then it goes to the next player by using the function of `nextPlayer()`:
 
 ```sh
 document.querySelector('.btn-roll').addEventListener('click', function() {
@@ -128,6 +130,8 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 });
 ```
 
-The game implements JavaScript to make it work while also using the basics of HTML and CSS. No plug-ins for JS (JavaScript), but it does use the Google API Font for Lato and it uses the icons from Ionic Framework website.
+The game implements JavaScript to make it work while also using the basics of HTML and CSS. No plug-ins or extensions for JS, but it does use the Google API Font for Lato and it uses the icons from Ionic Framework website.
 
-This JavaScript game was inspired when I was learning on JavaScript from a Udemy course "The Complete JavaScript Course 2019: Build Real Projects!" by (name). All of my thanks and the code belongs to him.
+This JavaScript game was inspired when I was learning JavaScript from a Udemy course "The Complete JavaScript Course 2019: Build Real Projects!" by (name). All of my thanks and the code belongs to him.
+
+Thanks for visiting the repository, and hopefully you enjoy the project!
