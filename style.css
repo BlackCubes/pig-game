@@ -148,13 +148,13 @@ i {
 }
 
 .dice {
-    top: 200px;
+    top: 250px;
     box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
 }
 
 .winning-score-panel {
     font-size: 60px;
-    top: 150px;
+    top: 110px;
 }
 
 .winner { background-color: #f7f7f7; }
