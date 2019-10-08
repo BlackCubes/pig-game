@@ -65,7 +65,7 @@ function init() {
 
     winningScore = prompt('What should the winning score be?');
 
-    if (Number.isInteger(parseInt(winningScore)) {
+    if (Number.isInteger(parseInt(winningScore))) {
         winningScore = parseInt(winningScore);
     } else {
         winningScore = 30;
