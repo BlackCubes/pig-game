@@ -27,7 +27,7 @@ document.querySelector('.winning-score-panel').textContent = winningScore;
 
 It then displays whatever the variable `winningScore` is to the browser. The object `parseInt()` is used to convert the string into numeric value from the prompt. The object `Number.isInteger()` checks if the value if numeric. If not, then it returns `false`.
 
-The function `init()` initializes the code when the page is first started, or when the user clicks on `NEW GAME`, and this is done by setting `scores`, `activePlayer`, and `roundScore` to `0`. Last but not least it sets `gamePlaying` to `true`:
+The function `init()` initializes the code when the page is first started, or when the user clicks on `NEW GAME`, and this is done by setting `scores`, `activePlayer`, and `roundScore` to `0`. Last but not least is setting `gamePlaying` to `true`:
 
 ```sh
 function init() {
@@ -60,6 +60,25 @@ function init() {
     document.querySelector('.player-0-panel').classList.remove('active');
     document.querySelector('.player-1-panel').classList.remove('active');
     document.querySelector('.player-0-panel').classList.add('active');
+
+}
+```
+
+The function `nextPlayer()` determines whether the current active player is playing. If the player is not playing it switches over to the next one. The numeric values of `0` and `1` are used for the active player since there are only two players in the game with an array of keys `0` and `1` for players 1 and 2, respectively. This is also used to input the player's score stored in an array of `scores`. The global variable `roundScore` is set to `0` which resets the dice values. Lastly, JS codes are used to dynamically update the browser:
+
+```sh
+function nextPlayer() {
+
+    activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+    roundScore = 0;
+
+    document.getElementById('current-0').textContent = '0';
+    document.getElementById('current-1').textContent = '0';
+
+    document.querySelector('.player-0-panel').classList.toggle('active');
+    document.querySelector('.player-1-panel').classList.toggle('active');
+
+    document.querySelector('.dice').style.display = 'none';
 
 }
 ```
