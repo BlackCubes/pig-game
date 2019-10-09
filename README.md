@@ -1,5 +1,7 @@
 # Pig Game (A JavaScript Game)
 
+![image](full-game_info.png)
+
 Pig Game (or Pig) was first created by John Scarne in 1945 which is basically a simple dice game. The rules of the game is that the players keep rolling a dice until they hit a 1 which is then the next player's turn. Yet, if the player has not hit a 1 then that player could 'hold' onto those values to add into their original value. The exact technicality of the game (according to Wikipedia) is:
 
 - If the player rolls a 1, they score nothing and it becomes the next player's turn.
@@ -9,7 +11,17 @@ Pig Game (or Pig) was first created by John Scarne in 1945 which is basically a 
 
 To actually play the game, click on the link (LINK!).
 
-The player could hit `ROLL DICE` to continue to roll (show picture), `HOLD` to keep the score (show picture), or click `NEW GAME` to start a brand new game (show picture).
+The player could either hit `ROLL DICE` to continue to roll:
+
+![image](roll-dice_Info.png)
+
+`HOLD` to keep the score:
+
+![image](hold-dice_Info.png)
+
+Or click `NEW GAME` to start a brand new game:
+
+![image](new-game_Info.png)
 
 In the beginning of entering the page, the browser interacts with the user with a prompt asking `What should the winning score be?` which the user then inputs the score. (Show picture)
 
@@ -132,6 +144,6 @@ document.querySelector('.btn-hold').addEventListener('click', function() {
 
 The game implements JavaScript to make it work while also using the basics of HTML and CSS. No plug-ins or extensions for JS, but it does use the Google API Font for Lato and it uses the icons from Ionic Framework website.
 
-This JavaScript game was inspired when I was learning JavaScript from a Udemy course "The Complete JavaScript Course 2019: Build Real Projects!" by (name). All of my thanks and the code belongs to him.
+This JavaScript game was inspired when I was learning JavaScript from a Udemy course "The Complete JavaScript Course 2019: Build Real Projects!" by Jonas Schmedtmann. All of my thanks and the code belongs to him.
 
 Thanks for visiting the repository, and hopefully you enjoy the project!
