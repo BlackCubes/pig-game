@@ -2,14 +2,14 @@
 
 ![image](full-game_info.png)
 
-Pig Game (or Pig) was first created by John Scarne in 1945 which is basically a simple dice game. The rules of the game is that the players keep rolling a dice until they hit a 1 which is then the next player's turn. Yet, if the player has not hit a 1 then that player could 'hold' onto those values to add into their original value. The exact technicality of the game (according to Wikipedia) is:
+Pig Game (or Pig) was first created by John Scarne in 1945 which is basically a simple dice game. The rules of the game is that the players keep rolling a dice until they hit a 1 which is then the next player's turn. Yet, if the player has not hit a 1 then that player could 'hold' onto those values to add into their original value. The exact technicality of the game (according to [Wikipedia](https://en.wikipedia.org/wiki/Pig_(dice_game))) is:
 
 - If the player rolls a 1, they score nothing and it becomes the next player's turn.
 - If the player rolls any other number, it is added to their turn total and the player's turn continues.
 - If a player chooses to "hold", their turn total is added to their score, and it becomes the next player's turn.
 - The first player to score the winning score or more wins the game.
 
-To actually play the game, click on the link (LINK!).
+To actually play the game, click on this link [here](https://blackcubes.github.io/pig-game/).
 
 The player could either hit `ROLL DICE` to continue to roll:
 
